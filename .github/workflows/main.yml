@@ -33,7 +33,6 @@ jobs:
       - name: Run a multi-line script
         run: |
            npm install
-           npm run test
            npm run build
       - name: Archive build artifacts
         uses: actions/upload-artifact@v2
