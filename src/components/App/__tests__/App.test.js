@@ -25,3 +25,7 @@ it('shows a shelf', () => {
 it('shows a floating cart', () => {
   expect(wrapped.find(FloatCart).length).toEqual(1);
 });
+
+it('fails', () => {
+  expect(true).toEqual(true);
+});
