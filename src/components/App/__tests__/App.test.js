@@ -3,6 +3,7 @@ import App from '../';
 
 import Shelf from '../../Shelf';
 import FloatCart from '../../FloatCart';
+import { expect } from 'chai';
 
 let wrapped;
 
@@ -24,4 +25,8 @@ it('shows a shelf', () => {
 
 it('shows a floating cart', () => {
   expect(wrapped.find(FloatCart).length).toEqual(1);
+});
+
+it('fails', () => {
+  expect(true).toEqual(false);
 });
