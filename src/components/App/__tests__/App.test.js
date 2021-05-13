@@ -3,7 +3,6 @@ import App from '../';
 
 import Shelf from '../../Shelf';
 import FloatCart from '../../FloatCart';
-import { expect } from 'chai';
 
 let wrapped;
 
