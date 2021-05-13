@@ -63,4 +63,13 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - name: Deploy app
-        run: exit 0
+        uses: arillso/action.playbook@master
+        with:
+          playbook: ansible/ec2_deploy.yml
+        env:
+          ANSIBLE_HOST_KEY_CHECKING: 'false'
+          ANSIBLE_DEPRECATION_WARNINGS: 'false'
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
+
